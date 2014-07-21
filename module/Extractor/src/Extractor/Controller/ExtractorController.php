@@ -19,7 +19,7 @@ class ExtractorController extends AbstractActionController
 	{
 		$request = $this->getRequest();
 		
-		if(!$resquest instanceof Request){
+		if(!$request instanceof Request){
 			throw new \RuntimeException('Use only console request please');
 		}
 		
