@@ -6,6 +6,11 @@ return [
             'extractor.controller' => 'Extractor\Controller\ExtractorController',
         ],
     ],
+    'service_manager' => [
+        'invokables'         => [
+            'extractor.service'  => 'Extractor\Service\ExtractorService',
+        ],
+    ],
     'console' => [
         'router' => [
             'routes' => [
