@@ -4,5 +4,11 @@
 		"phpunit/phpunit" : "4.1.*",
 		"zendframework/zendframework" : "2.3.*",
 		"doctrine/doctrine-orm-module" : "0.8.*"
+	},
+	"autoload" : {
+		"psr-0": {
+			"Extractor" : "module/Extractor/src"
+		}
 	}		
-}	
+}
+
