@@ -25,6 +25,10 @@ class ExtractorController extends AbstractActionController
 		
 		$limit = (int) $request->getParam('limit', 200);
 		
+		//Access to service
+		$extractService = $this->getServiceLocator()->get('extractor.service');
+		$extractService->extract($limit);
+		
 		return 'Extract action Done!' . PHP_EOL;
 	}
 	
