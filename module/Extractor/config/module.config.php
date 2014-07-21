@@ -27,4 +27,20 @@ return [
             ],
         ],
     ],
+    'doctrine' => [
+        'driver' => [
+            'extractor_entities' => [
+                'class' => 'Doctrine\ORM\Mapping\Driver\AnnotationDriver',
+                'cache' => 'array',
+                'paths' => [
+                    __DIR__ . '/../src/Extractor/Entity',
+                ],
+            ],
+            'orm_default' => [
+                'drivers' => [
+                    'Extractor\Entity' => 'extractor_entities',
+                ],
+            ],
+        ],
+    ],
 ];
