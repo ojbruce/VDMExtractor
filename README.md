@@ -18,29 +18,31 @@ API
 The API uses HTML methods to retrieve stored posts.
 It returns Json
 
+To launch don't forget to start the server:
+```php -S host:port ```
 
 
 **Get every posts**
 
-  /api/posts 
+``` http://host:port/api/posts  ```
 
 **Filter posts**
 
 *By author...*
 
-  /api/posts?author=Michel 
+``` http://host:port/api/posts?author=Michel ```
 
 *By from date...*
 
-  /api/posts?from=2014-07-01 
+``` http://host:port/api/posts?from=2014-07-01 ```
 
 *By from & to date...*
 
-  /api/posts?from=2014-07-01&to=2014-07-15 
+``` http://host:port/api/posts?from=2014-07-01&to=2014-07-15 ```
 
 **Get a single post by its id**
 
-  /api/posts/post_id 
+``` http://host:port/api/posts/post_id ```
 
 
 Tests
