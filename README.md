@@ -9,38 +9,38 @@ Extractor
 
 Store 200 VDM posts in your database
 
-```php public/index.php extract vdm 200```
+```php public/index.php extract vdm 200 ```
 
 
 API
 ---
 
 The API uses HTML methods to retrieve stored posts.
-It returns Json.
+It returns Json
 
 
 
 **Get every posts**
 
-/api/posts
+  /api/posts 
 
 **Filter posts**
 
 *By author...*
 
-/api/posts?author=Michel
+  /api/posts?author=Michel 
 
 *By from date...*
 
-/api/posts?from=2014-07-01
+  /api/posts?from=2014-07-01 
 
 *By from & to date...*
 
-/api/posts?from=2014-07-01&to=2014-07-15
+  /api/posts?from=2014-07-01&to=2014-07-15 
 
 **Get a single post by its id**
 
-``` /api/posts/post_id```
+  /api/posts/post_id 
 
 
 Tests
@@ -48,7 +48,7 @@ Tests
 
 Launch every single tests
 
-```./vendor/bin/phpunit -c phpunit.xml```
+```./vendor/bin/phpunit -c phpunit.xml ```
 
 Powered by
 ----------
