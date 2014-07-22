@@ -8,7 +8,9 @@ use Zend\Console\Request;
 
 /**
  * This class represents the module's controller 
- * To extract the vdm's posts 
+ * To extract the vdm's posts with a console
+ *
+ * Uses service to extract data
  */
 class ExtractorController extends AbstractActionController
 {

@@ -43,7 +43,8 @@ class ExtractorService implements ServiceLocatorAwareInterface
 			@$html->loadHTMLFile($this->VDMUrl . '' . $page . '');
 
 			$nodesPosts = $this->getDomNodePosts($html);
-
+			
+			// Pass through each node
 			foreach ($nodesPosts as $nodePost) {
 
 				if (count($posts) >= $limit) {
@@ -72,7 +73,9 @@ class ExtractorService implements ServiceLocatorAwareInterface
 
 		foreach ($posts as $post) {
 			// Persist to database
-			$this->entityManager->persist($post);
+			if(!$this->entityManager->find('Extractor\Entity\Post', $post->getId())){
+				$this->entityManager->persist($post);
+			}
 		}
 		$this->entityManager->flush();
 	}

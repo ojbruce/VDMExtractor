@@ -7,7 +7,10 @@
 Extractor
 ---------
 
-Store 200 VDM posts in your database
+Create database schema:
+```./vendor/bin/doctrine-module orm:schema-tool:create```
+
+Store 200 VDM posts in your database.
 
 ```php public/index.php extract vdm 200 ```
 
@@ -16,9 +19,9 @@ API
 ---
 
 The API uses HTML methods to retrieve stored posts.
-It returns Json
+It returns Json.
 
-To launch don't forget to start the server:
+To launch don't forget to start the server in /public:
 ```php -S host:port ```
 
 
