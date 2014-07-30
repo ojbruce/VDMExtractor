@@ -87,7 +87,7 @@ class ExtractorService implements ServiceLocatorAwareInterface
 	 */
 	public function extractAuthor($nodePostText)
 	{
-		$patternAuthor = "- par ([a-zA-Z0-9\']+([a-zA-Z\_0-9\.-\']*)) (\(homme\)|\(femme\))?";
+		$patternAuthor = "- par ([a-zA-Z0-9àâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ\']+([a-zA-Z\_0-9àâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ\.-\']*)) (\(homme\)|\(femme\))?";
 		ereg($patternAuthor, $nodePostText, $matches); 
 		return $matches[1];
 	}
